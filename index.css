@@ -27,7 +27,7 @@ body {
 	color: #FFF;
 	text-align: center;
 	float: left;
-	overflow: auto;
+	overflow: hidden;
 }
 
 /* WIDTH RULES */
@@ -66,5 +66,3 @@ body {
 .middle {
 	margin: 0 5px 10px 5px;
 }
-
-/*JIMS EDIT TEST*/
