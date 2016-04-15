@@ -10,15 +10,6 @@ body {
 	padding: 0px;
 }
 
-/* 1080x1920 BOUNDARY RULES */
-#container {
-	height: 1900px;
-	width: 1060px;
-	padding: 10px;
-	margin: 0 auto 0 auto;
-	background-color: #FFF;
-}
-
 /* TILE STYLE RULES */
 .tile {
 	background-color: #3171b8;
@@ -65,4 +56,16 @@ body {
 }
 .middle {
 	margin: 0 5px 10px 5px;
+}
+
+/* 1080x1920 BOUNDARY RULES */
+#container {
+	height: 1900px;
+	width: 1060px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+	background-color: #FFF;
+}
+#programs {
+	background-image: url(assets/tiles/Programs.png);
 }
