@@ -137,6 +137,32 @@ $(window).load(function() { //start after HTML, images have loaded
     }
     welcomeRotator.init();
 
+    var communityRotator=
+    {
+    init: function()
+        {
+            //interval between items (in milliseconds)
+            var commInterval = 5000;
+            //count number of items
+            var commItemLength = $('.community-rotate').length;
+            //set current item
+            var commItem = 0;
+            //loop through the items
+            var infiniteCommLoop = setInterval(function(){
+                $('.community-rotate').eq(commItem).hide( "fade", "slow" );
+                if(commItem == commItemLength-1){
+                    commItem = 0;
+                    $('.community-rotate').eq(commItem).show("fade", "slow");
+                }else{
+                   commItem++;
+                    $('.community-rotate').eq(commItem).show("fade", "slow");
+                }
+              
+            }, commInterval);
+        }
+    };
+    communityRotator.init();
+
 
 
 
