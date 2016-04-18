@@ -51,7 +51,7 @@ $(window).load(function() { //start after HTML, images have loaded
 	
 
 
-
+    //testimonials
     var testimonialRotator=
     {
     init: function()
@@ -109,6 +109,37 @@ $(window).load(function() { //start after HTML, images have loaded
     };
     testimonialRotator.init();*/
 	
+    //welcome screen slider
+    var welcomeRotator=
+    {
+        init: function()
+        {
+            var welcomeTimeLoop = setInterval(function(){
+                var currentDate = new Date();
+                var currentHour = currentDate.getHours();
+                var currentMinute = currentDate.getMinutes();
+                if (currentMinute < 10) {
+                    currentMinute = "0" + currentMinute;
+                }
+                var currentSeconds = currentDate.getSeconds();
+                var ampm = currentHour < 12 ? "am" : "pm";
+                currentHour = (currentHour%12);
+                currentHour = (currentHour == 0 ? 12 : currentHour);
+                var scheduledTime = currentHour +":"+currentMinute+":"+currentSeconds+" "+ampm;
+                
+                $('#welcomecontent').fadeOut('slow','swing',function()
+                {
+                    $('#welcomecontent').html(scheduledTime).show();
+                });
+
+                },10000)
+            }
+    }
+    welcomeRotator.init();
+
+
+
+
 	
 	//main slider
 	$('.bxslider').bxSlider({

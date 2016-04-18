@@ -140,5 +140,16 @@ a.control_next {
   margin: 0px;
   padding: 0px;
 }
+#welcome {
+	background-image: url(assets/tiles/Welcome.png)
+	
+	
+}
+#welcomecontent {
+	
+	margin: 75px 10px 5px 10px;
+    Height: 80px;
+    Width: 1040px;
+}
 
 
