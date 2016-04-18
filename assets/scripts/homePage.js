@@ -1,3 +1,20 @@
+//constant
+const TESTIMONIALS = [
+
+/*this is the first testimonial*/
+'<p>"I saw the curriculum for graphic arts, and I thought, wow, there'+"'"+'s no filler.</p><p class="bluetestimonialtext"> Everything is to the point.</p><p>It'+"'"+'s a lot of hands-on study, very practical."-LUCIANO SORMANI',
+
+/*this is the second testimonial*/
+'<br/><p>"I stopped in for an Interview at Continental Real Estate. About 15 minues later, I had <span class="bluetestimonialtext">an internship AND a job</span>."-JODI CROSSON</p>',
+
+/*this is the third testimonial*/
+'<p>"I love that I can more <span class="bluetestimonialtext">specifically target</span> what I want to do.</p><p>I think my SouthHills degree can <label class="bluetestimonialtext">open a lot of doors</label> for me." -DANIELLE MEADOWS'
+
+];//This is the closing TESTIMONIALS bracket
+
+//global
+var count=1;
+
 $(document).ready(function() {
 	//testing links
 	
@@ -6,7 +23,7 @@ $(document).ready(function() {
 });
 
 $(window).load(function() { //start after HTML, images have loaded
-    var ProgramRotator =
+   var ProgramRotator =
     {
         init: function()
         {
@@ -32,7 +49,40 @@ $(window).load(function() { //start after HTML, images have loaded
     };
     ProgramRotator.init();
 	
-	var testimonialRotator=
+
+
+
+    var testimonialRotator=
+    {
+    init: function()
+        {
+            $('#testimonials-text').html(TESTIMONIALS[0]);
+            //interval between items (in milliseconds)
+            var testInterval = 7000;
+            //count number of items
+            var numTestimonials = TESTIMONIALS.length;
+            //set current item
+            var testimonialItem = 0;
+            
+            //loop through the items
+            var infiniteTestLoop = setInterval(function(){
+                
+                
+                
+                var HTML = TESTIMONIALS[count];
+                $('#testimonials-text').fadeOut('slow','swing',function(){
+                    $('#testimonials-text').html(HTML);
+                    $('#testimonials-text').show();
+                    if (++count==numTestimonials)
+                        count=0;
+                });
+                
+              
+            }, testInterval);
+        }
+    };
+    testimonialRotator.init();
+	/*var testimonialRotator=
 	{
 	init: function()
         {
@@ -57,7 +107,7 @@ $(window).load(function() { //start after HTML, images have loaded
             }, testInterval);
         }
     };
-    testimonialRotator.init();
+    testimonialRotator.init();*/
 	
 	
 	//main slider
@@ -65,7 +115,9 @@ $(window).load(function() { //start after HTML, images have loaded
   		auto: true,
   		autoControls: false
 	});
-
+	
+	
+	
 });    
 
 
