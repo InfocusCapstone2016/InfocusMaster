@@ -1,28 +1,8 @@
 $(document).ready(function() {
 	//testing links
-	var programs = document.getElementById('programs');
-	$(programs).click(function(){
-		window.location="programs/index.html";
-	});
 	
-	//Natalie Programs Slider 
-/*	(function(){
-        var imgLength = document.getElementById('programs');
-        var images = imgLength.getElementsByTagName('img');
-        var counter = 1;
-
-        if(counter <= images.length){
-            setInterval(function(){
-                images[0].src = images[counter].src;
-                console.log(images[counter].src);
-                counter++;
-
-                if(counter === images.length){
-                    counter = 1;
-                }
-            },3000);
-        }
-})();*/
+	
+	
 });
 
 $(window).load(function() { //start after HTML, images have loaded
@@ -31,27 +11,72 @@ $(window).load(function() { //start after HTML, images have loaded
         init: function()
         {
             //interval between items (in milliseconds)
-            var itemInterval = 5000;
-            //cross-fade time (in milliseconds)
-            var fadeTime = 2000;
+            var itemInterval = 4000;
             //count number of items
             var numberOfItems = $('.program-rotate').length;
             //set current item
             var currentItem = 0;
-            //show first item
-            $('.program-rotate').eq(currentItem)
+         	
             //loop through the items
             var infiniteLoop = setInterval(function(){
-                $('.program-rotate').eq(currentItem).fadeOut(fadeTime);
-                if(currentItem == numberOfItems -1){
+				$('.program-rotate').eq(currentItem).hide( "fade", "slow" );
+						
+				
+				
+                if(currentItem == numberOfItems-1){		
+				
                     currentItem = 0;
+					$('.program-rotate').eq(currentItem).show("fade", "slow");
+					
+					
+
                 }else{
-                    currentItem++;
+			
+						currentItem++;
+						$('.program-rotate').eq(currentItem).show("fade", "slow");
+						
+
                 }
-                $('.program-rotate').eq(currentItem).fadeIn(fadeTime);
+			
+
+				
+               
             }, itemInterval);
         }
     };
     ProgramRotator.init();
+	
+	var testimonialRotator=
+	{
+	init: function()
+        {
+            //interval between items (in milliseconds)
+            var testInterval = 5000;
+            //count number of items
+            var testItemLength = $('.testimonial-rotate').length;
+            //set current item
+            var testimonialItem = 0;
+           
+            //loop through the items
+            var infiniteTestLoop = setInterval(function(){
+				
+            
+                if(testimonialItem == testItemLength-1){
+					 $('.testimonial-rotate').eq(testimonialItem).hide();
+                    testimonialItem = 0;
+					$('.testimonial-rotate').eq(testimonialItem).effect("slide", "slow");
+					
+                }else{
+					 $('.testimonial-rotate').eq(testimonialItem).hide();
+                    testimonialItem++;
+					$('.testimonial-rotate').eq(testimonialItem).effect("slide", "slow");
+					
+                }
+              
+            }, testInterval);
+        }
+    };
+    testimonialRotator.init();
 });
+
 
