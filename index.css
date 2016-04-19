@@ -66,6 +66,10 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
 }
+#header {
+	background-image: url(assets/tiles/header.png);
+}
+
 #welcome {
 	background-image: url(assets/tiles/Welcome.png)
 	
