@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-/* DEFAULT STYLE RULES*/
+/* DEFAULT STYLE RULES */
 body {
 	color: #000;
 	background-color: #000;
@@ -111,7 +110,7 @@ body {
 	font-weight: bold;
 }
 .bluetestimonialtext {
-	color: #3171B8 !important;
+	color: #3171B8;
 	font-weight: 900;
 }
 
