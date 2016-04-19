@@ -66,8 +66,41 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
 }
+#welcome {
+	background-image: url(assets/tiles/Welcome.png)
+	
+	
+}
+#welcomecontent {
+	
+	margin: 75px 10px 5px 10px;
+    Height: 80px;
+    Width: 1040px;
+}
+#programs {
+	background-image: url(assets/tiles/Programs.png);
+}
+#community {
+	background-image: url(assets/tiles/Community.png);
+}
+#testimonials {
+  background-image: url(assets/tiles/testimonials/BlankTestimonialsSlide.png);  
+  
+}
 
-
+#testimonials-text {
+    margin: 75px 10px 5px 10px;
+    Height: 80px;
+    Width: 1040px;
+}
+#testimonials-text p {
+  color: black;
+  font-size: 15px;
+  margin: 0px;
+  padding-top: 5px;
+  font-weight: 900;
+  line-height: normal;  
+}
 #slider ul {
   position: relative;
   margin: 0;
@@ -84,7 +117,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-
 }
 
 a.control_prev, a.control_next {
@@ -117,43 +149,14 @@ a.control_next {
   right: 8%;
   border-radius: 2px 0 0 2px;
 }
-#testimonials {
-  background-image: url(assets/tiles/testimonials/BlankTestimonialsSlide.png);  
-  
-}
-#testimonials-text {
-    margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
-}
-#testimonials-text p {
-  color: black;
-  font-size: 15px;
-  margin: 0px;
-  padding-top: 5px;
-  font-weight: 900;
-  line-height: normal;  
-}
+
 .bluetestimonialtext {
   color: #3171B8 !important;  
   
   margin: 0px;
   padding: 0px;
 }
-#welcome {
-	background-image: url(assets/tiles/Welcome.png)
-	
-	
-}
-#welcomecontent {
-	
-	margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
-}
 .bxslider{
 	margin:0;
 	padding:0;
 }
-
-

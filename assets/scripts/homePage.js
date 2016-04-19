@@ -5,7 +5,7 @@ const TESTIMONIALS = [
 '<p>"I saw the curriculum for graphic arts, and I thought, wow, there'+"'"+'s no filler.</p><p class="bluetestimonialtext"> Everything is to the point.</p><p>It'+"'"+'s a lot of hands-on study, very practical."-LUCIANO SORMANI',
 
 /*this is the second testimonial*/
-'<br/><p>"I stopped in for an Interview at Continental Real Estate. About 15 minues later, I had <span class="bluetestimonialtext">an internship AND a job</span>."-JODI CROSSON</p>',
+'<br/><p>"I stopped in for an Interview at Continental Real Estate. About 15 minues later, I had <span class="bluetestimonialtext">an internship AND a job</span>."<br />-JODI CROSSON</p>',
 
 /*this is the third testimonial*/
 '<p>"I love that I can more <span class="bluetestimonialtext">specifically target</span> what I want to do.</p><p>I think my SouthHills degree can <label class="bluetestimonialtext">open a lot of doors</label> for me." -DANIELLE MEADOWS'
