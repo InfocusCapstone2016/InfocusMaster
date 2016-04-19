@@ -18,11 +18,7 @@ var count=1;
 $(document).ready(function() {
 	//testing links
 	
-	
-	
-});
-
-$(window).load(function() { //start after HTML, images have loaded
+	$(window).load(function() { //start after HTML, images have loaded
    var ProgramRotator =
     {
         init: function()
@@ -82,32 +78,6 @@ $(window).load(function() { //start after HTML, images have loaded
         }
     };
     testimonialRotator.init();
-	/*var testimonialRotator=
-	{
-	init: function()
-        {
-            //interval between items (in milliseconds)
-            var testInterval = 5000;
-            //count number of items
-            var testItemLength = $('.testimonial-rotate').length;
-            //set current item
-            var testimonialItem = 0;
-            //loop through the items
-            var infiniteTestLoop = setInterval(function(){
-                if(testimonialItem == testItemLength-1){
-					 $('.testimonial-rotate').eq(testimonialItem).hide();
-                    testimonialItem = 0;
-					$('.testimonial-rotate').eq(testimonialItem).effect("slide", "slow");
-                }else{
-					 $('.testimonial-rotate').eq(testimonialItem).hide();
-                    testimonialItem++;
-					$('.testimonial-rotate').eq(testimonialItem).effect("slide", "slow");
-                }
-              
-            }, testInterval);
-        }
-    };
-    testimonialRotator.init();*/
 	
     //welcome screen slider
     var welcomeRotator=
@@ -168,14 +138,25 @@ $(window).load(function() { //start after HTML, images have loaded
 
 	
 	//main slider
-	$('.bxslider').bxSlider({
+	var slider=$('.bxslider').bxSlider({
   		auto: true,
   		autoControls: false
 	});
 	
+	$('.bx-prev').click(function(){
+		slider.startAuto();
+	
+	});
+	$('.bx-next').click(function(){
+		slider.startAuto();
+	
+	});
 	
 	
-});    
+	});
+});
+	
+	 
 
 
 
