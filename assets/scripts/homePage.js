@@ -16,9 +16,7 @@ const TESTIMONIALS = [
 var count=1;
 
 $(document).ready(function() {
-	//testing links
-	
-	$(window).load(function() { //start after HTML, images have loaded
+	//Programs Tile Rotator
    var ProgramRotator =
     {
         init: function()
@@ -32,13 +30,13 @@ $(document).ready(function() {
          	
             //loop through the items
             var infiniteLoop = setInterval(function(){
-				$('.program-rotate').eq(currentItem).hide( "fade", "slow" );
+				$('.program-rotate').eq(currentItem).effect( "fade", "slow" );
                 if(currentItem == numberOfItems-1){		 
                     currentItem = 0;
-					$('.program-rotate').eq(currentItem).show("fade", "slow");
+					$('.program-rotate').eq(currentItem).effect("fade", "slow");
                 }else{
 						currentItem++;
-						$('.program-rotate').eq(currentItem).show("fade", "slow");
+						$('.program-rotate').eq(currentItem).effect("fade", "slow");
 				}
             }, itemInterval);
         }
@@ -47,7 +45,7 @@ $(document).ready(function() {
 	
 
 
-    //testimonials
+    //Testimonial Tile Rotator
     var testimonialRotator=
     {
     init: function()
@@ -79,7 +77,7 @@ $(document).ready(function() {
     };
     testimonialRotator.init();
 	
-    //welcome screen slider
+    //Welcome Tile Code
     var welcomeRotator=
     {
         init: function()
@@ -107,6 +105,7 @@ $(document).ready(function() {
     }
     welcomeRotator.init();
 
+	//Comminity Tile Rotator
     var communityRotator=
     {
     init: function()
@@ -119,13 +118,13 @@ $(document).ready(function() {
             var commItem = 0;
             //loop through the items
             var infiniteCommLoop = setInterval(function(){
-                $('.community-rotate').eq(commItem).hide( "fade", "slow" );
+                $('.community-rotate').eq(commItem).hide( "slide", "slow" );
                 if(commItem == commItemLength-1){
                     commItem = 0;
-                    $('.community-rotate').eq(commItem).show("fade", "slow");
+                    $('.community-rotate').eq(commItem).show("slide", "slow");
                 }else{
                    commItem++;
-                    $('.community-rotate').eq(commItem).show("fade", "slow");
+                    $('.community-rotate').eq(commItem).show("slide", "slow");
                 }
               
             }, commInterval);
@@ -137,12 +136,13 @@ $(document).ready(function() {
 
 
 	
-	//main slider
+	//Main Slider Code
 	var slider=$('.bxslider').bxSlider({
   		auto: true,
   		autoControls: false
 	});
 	
+	//Starting the auto on clicks and swipe
 	$('.bx-prev').click(function(){
 		slider.startAuto();
 	
@@ -152,9 +152,13 @@ $(document).ready(function() {
 	
 	});
 	
+	$('#rotator').on("swipe",function(){
+  	slider.startAuto();
+	});
+	
 	
 	});
-});
+
 	
 	 
 
