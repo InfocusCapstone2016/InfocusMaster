@@ -48,15 +48,22 @@ body {
 	margin: 25px 0 0 25px;
 	border-radius: 20px;
 }
-#content_table {
-	height: 1600px;
-	width: 1030px;
+
+#content .trHeader div {
 	border-radius: 20px;
 }
-#content_table tr td {
+
+#content .trContent div {
 	border-radius: 20px;
 }
-#content_table tr td .title{
+#content .trHeader div .title{
+	color: #FFF;
+	background-color: #282828;
+	padding: 5px 0 5px 30px;
+	border-radius: 20px;
+	margin: 0 25px 0 25px;
+}
+#content .trContent div .title{
 	color: #FFF;
 	background-color: #282828;
 	padding: 5px 0 5px 30px;

@@ -30,8 +30,7 @@ $(document).ready(function() {
             var numberOfItems = $('.program-rotate').length;
             //set current item
             var currentItem = 0;
-         	
-            //loop through the items
+            //loop through the items and animate each one
             var infiniteLoop = setInterval(function(){
 				$('.program-rotate').eq(currentItem).hide( "fade", "slow" );
                 if(currentItem == numberOfItems-1){		 
@@ -60,10 +59,8 @@ $(document).ready(function() {
             var numTestimonials = TESTIMONIALS.length;
             //set current item
             var testimonialItem = 0;
-            
-            //loop through the items
+            //loop through the items, switch out the text, and animate each one
             var infiniteTestLoop = setInterval(function(){
-                
                 var HTML = TESTIMONIALS[count];
                 $('#testimonials-text').fadeOut('slow','swing',function(){
                     $('#testimonials-text').html(HTML);
@@ -82,11 +79,13 @@ $(document).ready(function() {
     var welcomeRotator=
     {
         init: function()
-        {
+        {	//setting the interval to check the time
             var welcomeTimeLoop = setInterval(function(){
+				//getting the current time
                 var currentDate = new Date();
                 var currentHour = currentDate.getHours();
                 var currentMinute = currentDate.getMinutes();
+				//formatting time
                 if (currentMinute < 10) {
                     currentMinute = "0" + currentMinute;
                 }
@@ -95,9 +94,9 @@ $(document).ready(function() {
                 currentHour = (currentHour%12);
                 currentHour = (currentHour == 0 ? 12 : currentHour);
                 var scheduledTime = currentHour +":"+currentMinute+":"+currentSeconds+" "+ampm;
-                
+                //animating content
                 $('#welcomecontent').fadeOut('slow','swing',function()
-                {
+                {	//showing the time
                     $('#welcomecontent').html(scheduledTime).show();
                 });
 
@@ -117,7 +116,7 @@ $(document).ready(function() {
             var commItemLength = $('.community-rotate').length;
             //set current item
             var commItem = 0;
-            //loop through the items
+            //loop through the items and animate each one
             var infiniteCommLoop = setInterval(function(){
                 $('.community-rotate').eq(commItem).hide( "fade", "slow" );
                 if(commItem == commItemLength-1){
@@ -135,13 +134,16 @@ $(document).ready(function() {
 
 	//Main Slider Actions
 	var slider=$('.bxslider').bxSlider({
+		//making it auto rotate
   		auto: true,
+		//turning off the auto controls
   		autoControls: false,
+		//starting auto again after swipe
 		onSlideAfter: function() {
         slider.startAuto();
     }
 	});
-	
+	//starting auto again after next/prev button clicks
 	$('.bx-prev').click(function(){
 		slider.startAuto();
 	
