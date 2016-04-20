@@ -16,4 +16,5 @@ $(document).ready(function(){
 		//sliding downt the content of the header that was clicked on
 		$(this).next('.trContent').slideToggle('slow');
 	});
+	
 });
