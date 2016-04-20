@@ -139,7 +139,16 @@ $(document).ready(function() {
 	//Main Slider Code
 	var slider=$('.bxslider').bxSlider({
   		auto: true,
-  		autoControls: false
+  		autoControls: false,
+		onSlideLoad: function() {
+        timer = setTimeout(null, 10000);
+    },
+    onSlideBefore: function() {
+        clearTimeout(timer);
+    },
+    onSlideAfter: function() {
+        timer = setTimeout(startAutoSlide, 5000);
+    }
 	});
 	
 	//Starting the auto on clicks and swipe
@@ -155,6 +164,10 @@ $(document).ready(function() {
 	$('#rotator').on("swipe",function(){
   	slider.startAuto();
 	});
+	
+	function startAutoSlide() {
+    slider.startAUto();
+}
 	
 	
 	});
