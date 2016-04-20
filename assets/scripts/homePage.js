@@ -143,7 +143,7 @@ $(document).ready(function() {
 		onSlideLoad: function() {
     },
     onSlideAfter: function() {
-        timer = setTimeout(startAutoSlide, 4000);
+        slider.startAuto();
     }
 	});
 	
@@ -160,9 +160,7 @@ $(document).ready(function() {
 	
 	});
 	
-	function startAutoSlide() {
-    slider.startAUto();
-	}
+	
 
 	
 	 
