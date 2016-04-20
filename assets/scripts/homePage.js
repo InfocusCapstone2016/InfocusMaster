@@ -19,9 +19,7 @@ const TESTIMONIALS = [
 var count=1;
 
 $(document).ready(function() {
-	//testing links
-	
-	$(window).load(function() { //start after HTML, images have loaded
+	//Program Fade Tile
    var ProgramRotator =
     {
         init: function()
@@ -50,7 +48,7 @@ $(document).ready(function() {
 	
 
 
-    //testimonials
+    //Testimonial Tile Switch Text Action
     var testimonialRotator=
     {
     init: function()
@@ -80,7 +78,7 @@ $(document).ready(function() {
     };
     testimonialRotator.init();
 	
-    //welcome screen slider
+    //Welcome Screen Tile Time Action
     var welcomeRotator=
     {
         init: function()
@@ -108,6 +106,7 @@ $(document).ready(function() {
     }
     welcomeRotator.init();
 
+	//Community Rotator Tile Fade Action
     var communityRotator=
     {
     init: function()
@@ -134,10 +133,13 @@ $(document).ready(function() {
     };
     communityRotator.init();
 
-	//main slider
+	//Main Slider Actions
 	var slider=$('.bxslider').bxSlider({
   		auto: true,
-  		autoControls: false
+  		autoControls: false,
+		onSlideAfter: function() {
+        slider.startAuto();
+    }
 	});
 	
 	$('.bx-prev').click(function(){
@@ -149,5 +151,5 @@ $(document).ready(function() {
 	
 	});
 	
-	});
 });
+	
