@@ -141,13 +141,9 @@ $(document).ready(function() {
   		auto: true,
   		autoControls: false,
 		onSlideLoad: function() {
-        timer = setTimeout(null, 10000);
-    },
-    onSlideBefore: function() {
-        clearTimeout(timer);
     },
     onSlideAfter: function() {
-        timer = setTimeout(startAutoSlide, 5000);
+        timer = setTimeout(startAutoSlide, 4000);
     }
 	});
 	
