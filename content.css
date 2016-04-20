@@ -42,33 +42,30 @@ body {
 	overflow: hidden;
 }
 #content {
-	background-color: #3171B8;
+	background-color: #282828;
 	width: 1030px;
-	height: 1600px;
-	margin: 25px 0 0 25px;
 	border-radius: 20px;
+	margin: 20px 0 0 20px;
+	padding: 5px;
 }
-
-#content .trHeader div {
+.trHeader {
 	border-radius: 20px;
+	height: 60px;
+	margin: 15px 0 10px 0;
+	width: 1030px;
 }
-
-#content .trContent div {
-	border-radius: 20px;
-}
-#content .trHeader div .title{
+.title   {
 	color: #FFF;
-	background-color: #282828;
-	padding: 5px 0 5px 30px;
+	background-color: #3171B8;
+	padding: 10px 0 10px 30px;
 	border-radius: 20px;
 	margin: 0 25px 0 25px;
 }
-#content .trContent div .title{
-	color: #FFF;
-	background-color: #282828;
-	padding: 5px 0 5px 30px;
+.trContent   {
 	border-radius: 20px;
-	margin: 0 25px 0 25px;
+	background-color: #FFF;
+	height: 1060px;
+	width: 1030px;
 }
 
 /* FOOTER RULES */
