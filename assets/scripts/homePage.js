@@ -161,16 +161,12 @@ $(document).ready(function() {
 	
 	});
 	
-	$('#rotator').on("swipe",function(){
-  	slider.startAuto();
+	
 	});
 	
 	function startAutoSlide() {
     slider.startAUto();
-}
-	
-	
-	});
+	}
 
 	
 	 
