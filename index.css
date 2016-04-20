@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-/* DEFAULT STYLE RULES*/
+/* DEFAULT STYLE RULES */
 body {
 	color: #000;
 	background-color: #000;
@@ -67,7 +66,55 @@ body {
 	background-color: #FFF;
 }
 
+/* INDIVIDUAL TILE RULES */
+#header {
+}
+#rotator {
+}
+#welcome {
+	background-image: url(assets/tiles/Welcome.png)
+}
+#welcomecontent {	
+	margin: 75px 10px 5px 10px;
+    Height: 80px;
+    Width: 1040px;
+}
+#programs {
+	background-image: url(assets/tiles/Programs.png);
+}
+#careerServices {
+}
+#financialAid {
+}
+#admissions {
+}
+#aboutUs {
+}
+#studentSpotlight {
+}
+#community {
+	background-image: url(assets/tiles/Community.png);
+}
+#testimonials {
+	background-image: url(assets/tiles/Testimonials.png);
+}
+#testimonial_table {
+	height: 165px;
+	width: 1065px;
+	text-align: center;
+	vertical-align: middle;
+}
+#testimonials-text p {
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+}
+.bluetestimonialtext {
+	color: #3171B8;
+	font-weight: 900;
+}
 
+/* ROTATOR SLIDER RULES */
 #slider ul {
   position: relative;
   margin: 0;
@@ -75,7 +122,6 @@ body {
   height: 100%;
   list-style: none;
 }
-
 #slider ul li {
   position: relative;
   display: block;
@@ -84,9 +130,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-
 }
-
 a.control_prev, a.control_next {
   position: absolute;
   top: 40%;
@@ -103,53 +147,18 @@ a.control_prev, a.control_next {
   opacity: 0.8;
   cursor: pointer;
 }
-
 a.control_prev:hover, a.control_next:hover {
   opacity: 1;
   -webkit-transition: all 0.2s ease;
 }
-
 a.control_prev {
   border-radius: 0 2px 2px 0;
 }
-
 a.control_next {
   right: 8%;
   border-radius: 2px 0 0 2px;
 }
-#testimonials {
-  background-image: url(assets/tiles/testimonials/BlankTestimonialsSlide.png);  
-  
+.bxslider{
+	margin:0;
+	padding:0;
 }
-#testimonials-text {
-    margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
-}
-#testimonials-text p {
-  color: black;
-  font-size: 15px;
-  margin: 0px;
-  padding-top: 5px;
-  font-weight: 900;
-  line-height: normal;  
-}
-.bluetestimonialtext {
-  color: #3171B8 !important;  
-  
-  margin: 0px;
-  padding: 0px;
-}
-#welcome {
-	background-image: url(assets/tiles/Welcome.png)
-	
-	
-}
-#welcomecontent {
-	
-	margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
-}
-
-
