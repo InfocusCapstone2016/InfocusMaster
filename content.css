@@ -47,6 +47,7 @@ body {
 	border-radius: 20px;
 	margin: 20px 0 0 20px;
 	padding: 5px;
+	overflow: auto;
 }
 	/* TITLE ROW */
 .trHeader {
@@ -69,7 +70,6 @@ body {
 	background-color: #FFF;
 	height: 1060px;
 	width: 1030px;
-	overflow: auto;
 }
 .contentBuffer {
 	width: 95%;
@@ -115,15 +115,25 @@ body {
 }
 
 /* SCROLLBAR STYLE */
--webkit-scrollbar-track {
-      background-color: #b46868;
-} /* the new scrollbar will have a flat appearance with the set background color */
--webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.2); 
-} /* this will style the thumb, ignoring the track */
--webkit-scrollbar-button {
-      background-color: #7c2929;
-} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
--webkit-scrollbar-corner {
-      background-color: black;
-} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+.scrollbar {
+	margin: 10px 0 0 30px;
+	float: left;
+	height: 1030px;
+	width: 980px;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+.SBstyle::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #FFF;
+}
+.SBstyle::-webkit-scrollbar {
+	width: 20px;
+	background-color: #F5F5F5;
+}
+.SBstyle::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3171B8;
+}
