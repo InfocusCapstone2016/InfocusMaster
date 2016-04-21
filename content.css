@@ -26,10 +26,10 @@ body {
 	overflow: hidden;
 }
 #sectionTitle {
-	font-size: 10em;
+	font-size: 6em;
 	font-family: "Times New Roman", Times, serif;
 	color: #FFF;
-	padding: 55px 0 0 80px;
+	padding: 120px 0 0 80px;
 	margin: 0;
 	width: 800px;
 	overflow: hidden;
@@ -48,12 +48,14 @@ body {
 	margin: 20px 0 0 20px;
 	padding: 5px;
 }
+	/* TITLE ROW */
 .trHeader {
 	border-radius: 20px;
 	height: 60px;
 	margin: 15px 0 10px 0;
 	width: 1030px;
 }
+	/* TITLE STYLE */
 .title   {
 	color: #FFF;
 	background-color: #3171B8;
@@ -61,11 +63,38 @@ body {
 	border-radius: 20px;
 	margin: 0 25px 0 25px;
 }
+	/* THE CONTENT STYLES */
 .trContent   {
 	border-radius: 20px;
 	background-color: #FFF;
 	height: 1060px;
 	width: 1030px;
+	overflow: auto;
+}
+.contentBuffer {
+	width: 95%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding: 5px;
+}
+.contentBuffer h1 {
+	font-size: 3em;
+}
+.contentBuffer h2 {
+	font-size: 2.5em;
+}
+.contentBuffer h3 {
+	font-size: 2em;
+}
+.contentBuffer p {
+	font-size: 1.5em;
+}
+.contentBuffer a {
+	text-decoration: none;
+	color: #3171B8;
+	font-weight: bold;
 }
 
 /* FOOTER RULES */
@@ -84,3 +113,17 @@ body {
 	width: 1080px;
 	text-align: center;
 }
+
+/* SCROLLBAR STYLE */
+-webkit-scrollbar-track {
+      background-color: #b46868;
+} /* the new scrollbar will have a flat appearance with the set background color */
+-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+} /* this will style the thumb, ignoring the track */
+-webkit-scrollbar-button {
+      background-color: #7c2929;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
