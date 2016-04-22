@@ -1,11 +1,10 @@
 $(document).ready(function() {
-	
-    //Welcome Screen Tile Time Action
+//Welcome Screen Tile Time Action
     var welcomeRotator=
     {
         init: function()
         {	//setting the interval to check the time
-            var welcomeTimeLoop = setInterval(function(){
+            var welcomeTimeLoop = setInterval(function() {
 				//getting the current time
                 var currentDate = new Date();
                 var currentHour = currentDate.getHours();
@@ -29,4 +28,5 @@ $(document).ready(function() {
             }
     }
     welcomeRotator.init();
-});
+    });
+ 
