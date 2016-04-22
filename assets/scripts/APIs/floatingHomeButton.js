@@ -1,4 +1,4 @@
-$(document).ready(funtion(){
+$(document).ready(function(){
 
 window.SignageInterface.showHomeFloatingButton(‘right’);
 
