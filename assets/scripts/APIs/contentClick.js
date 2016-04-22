@@ -1,0 +1,1 @@
+SignageInterface.contentClick(‘http://www.infocus.com’);

@@ -1,0 +1,1 @@
+SignageInterface.showHomeFloatingButton('left');
