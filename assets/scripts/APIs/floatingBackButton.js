@@ -1,1 +1,4 @@
-SignageInterface.showHomeFloatingButton('left');
+$(document).ready(function(){
+SignageInterface.showBackFloatingButton('left');
+});
+

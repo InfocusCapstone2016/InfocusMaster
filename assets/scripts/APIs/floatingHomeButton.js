@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-window.SignageInterface.showHomeFloatingButton("left");
+window.SignageInterface.showHomeFloatingButton('right');
 
 });
