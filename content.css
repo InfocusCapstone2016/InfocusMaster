@@ -47,7 +47,7 @@ body {
 	border-radius: 20px;
 	margin: 20px 0 0 20px;
 	padding: 5px;
-	overflow: auto;
+	overflow: hidden;
 }
 	/* TITLE ROW */
 .trHeader {
@@ -56,16 +56,16 @@ body {
 	margin: 15px 0 10px 0;
 	width: 1030px;
 }
-	/* TITLE STYLE */
-.title   {
+		/* TITLE STYLE */
+.title {
 	color: #FFF;
 	background-color: #3171B8;
 	padding: 10px 0 10px 30px;
 	border-radius: 20px;
 	margin: 0 25px 0 25px;
 }
-	/* THE CONTENT STYLES */
-.trContent   {
+		/* THE CONTENT STYLES */
+.trContent {
 	border-radius: 20px;
 	background-color: #FFF;
 	height: 1060px;
@@ -73,18 +73,16 @@ body {
 }
 .contentBuffer {
 	width: 95%;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
+	margin: 0 auto 0 auto;
 	padding: 5px;
+	overflow: none;
 }
 .tempContainer {
 	width: 1030px;
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
 }
-
+			/* FORMATTING STYLES */
 .contentBuffer h1 {
 	font-size: 3em;
 }
@@ -96,20 +94,34 @@ body {
 }
 .contentBuffer p {
 	font-size: 1.5em;
+	line-height: 1.75em;
 }
 .contentBuffer a {
 	text-decoration: none;
 	color: #3171B8;
 }
-.contentBuffer .blueButton {
-	padding: 8px;
-	color: #FFF;
+.contentBuffer hr {
+	width: 50%;
+	height: 2px;
 	background-color: #3171B8;
-	border-radius: 10px;
+	border: 0px;
 }
 .contentBuffer p img {
 	border: 2px solid #3171B8;
 	border-radius: 10px;
+	margin: 0 10px 0 10px;
+}
+.contentBuffer .blueButton {
+	padding: 10px 20px 10px 20px;
+	color: #FFF;
+	background-color: #3171B8;
+	border-radius: 10px;
+	margin: 10px 0 10px 0;
+}
+.contentBuffer .fancy {
+	color: #3171B8;
+	font-size: 1.8em;
+	line-height: 1em;
 }
 
 
@@ -137,7 +149,7 @@ body {
 	float: left;
 	height: 1030px;
 	width: 980px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	margin-bottom: 25px;
 }
 .SBstyle::-webkit-scrollbar-track {
