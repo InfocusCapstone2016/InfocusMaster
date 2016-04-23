@@ -1,3 +1,16 @@
+//constant
+const APPOINTMENTS = [
+
+4,23,2016,2,15,'am',Hello there Bryan
+
+/*APPOINTMENT 1*/
+//Month,Day,Year,Hour,Minute,am/pm,message
+
+];//This is the closing APPOINTMENTS bracket
+
+//global
+var count=0;
+
 $(document).ready(function() {
 //Welcome Screen Tile Time Action
     var welcomeRotator=
@@ -7,24 +20,44 @@ $(document).ready(function() {
             var welcomeTimeLoop = setInterval(function() {
 				//getting the current time
                 var currentDate = new Date();
+				var currentYear = currentDate.getFullYear();
+				var currentMonth = currentDate.getMonth()+1;
+				var currentDay = currentDate.getDate();
                 var currentHour = currentDate.getHours();
                 var currentMinute = currentDate.getMinutes();
+				//var currentSeconds = currentDate.getSeconds();
+				
+				
+				
+				
 				//formatting time
                 if (currentMinute < 10) {
                     currentMinute = "0" + currentMinute;
                 }
-                var currentSeconds = currentDate.getSeconds();
+                
                 var ampm = currentHour < 12 ? "am" : "pm";
                 currentHour = (currentHour%12);
                 currentHour = (currentHour == 0 ? 12 : currentHour);
-                var scheduledTime = currentHour +":"+currentMinute+":"+currentSeconds+" "+ampm;
+				var scheduledDate = currentYear +"/"+currentMonth+"/"+currentDay;
+                var scheduledTime = currentHour +":"+currentMinute+":"+" "+ampm;
+				//end time formatting
+				
+				
+				
+				
+				
+				
+				
+				
+				
                 //animating content
                 $('#welcomecontent').fadeOut('slow','swing',function()
                 {	//showing the time
-                    $('#welcomecontent').html(scheduledTime).show();
+					$('#welcomecontent').html(scheduledDate).show();
+                  //  $('#welcomecontent').html(scheduledTime).show();
                 });
 
-                },10000)
+                },1000)
             }
     }
     welcomeRotator.init();
