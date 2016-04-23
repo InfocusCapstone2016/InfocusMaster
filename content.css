@@ -16,6 +16,7 @@ body {
 	padding: 0;
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
+	overflow: hidden;
 }
 
 /* HEADER RULES */
@@ -23,23 +24,53 @@ body {
 	background-image: url(assets/content/header_bg.png);
 	height: 230px;
 	width: 1080px;
-	overflow: hidden;
+	text-transform: uppercase;
 }
 #sectionTitle {
+	font-size: 9em;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+	margin: 0;
+	width: 880px;
+	overflow: hidden;
+	float: left;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+}
+	/* USE THESE IN CASES OF LONG TITLES IT UTILIZES TWO LINES INSTEAD OF ONE */
+#sectionTitleHalfTop {
 	font-size: 6em;
 	font-family: "Times New Roman", Times, serif;
 	color: #FFF;
-	padding: 120px 0 0 80px;
 	margin: 0;
-	width: 800px;
-	overflow: hidden;
+	width: 880px;
+	float: left;
+	height: 100px;
+	text-align: center;
+	line-height: 140px;
+}
+#sectionTitleHalfBottom {
+	font-size: 5em;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+	margin: 0;
+	width: 880px;
+	float: left;
+	height: 100px;
+	text-align: center;
+}
+#SHLogo {
+	float: right;
+	height: 200px;
+	width: 200px;
+	cursor: pointer;
 }
 
 /* BODY AND CONTENT RULES */
 #body {
-	height: 1650px;
+	height: 1630px;
 	width: 1080px;
-	overflow: hidden;
 }
 #content {
 	background-color: #282828;
@@ -47,20 +78,20 @@ body {
 	border-radius: 20px;
 	margin: 20px 0 0 20px;
 	padding: 5px;
-	overflow: hidden;
 }
 	/* TITLE ROW */
 .trHeader {
 	border-radius: 20px;
 	height: 60px;
-	margin: 15px 0 10px 0;
+	margin: 10px 0 10px 0;
 	width: 1030px;
+	line-height: 60px;
 }
 		/* TITLE STYLE */
 .title {
 	color: #FFF;
 	background-color: #3171B8;
-	padding: 10px 0 10px 30px;
+	padding: 0 0 0 30px;
 	border-radius: 20px;
 	margin: 0 25px 0 25px;
 }
@@ -68,20 +99,17 @@ body {
 .trContent {
 	border-radius: 20px;
 	background-color: #FFF;
-	height: 1060px;
+	height: 1090px;
 	width: 1030px;
+}
+.contentExtended {
+	height: 1520px;
 }
 .contentBuffer {
-	width: 95%;
 	margin: 0 auto 0 auto;
-	padding: 5px;
 	overflow: none;
 }
-.tempContainer {
-	width: 1030px;
-	margin: 0 auto 0 auto;
-	background-color: #FFF;
-}
+
 			/* FORMATTING STYLES */
 .contentBuffer h1 {
 	font-size: 3em;
@@ -132,15 +160,13 @@ body {
 	width: 1080px;
 	background-color: #3171B8;
 	text-align: center;
-	font-weight: bold;
 	color: #FFF;
-	padding: 0;
-	margin: 0;
+	line-height: 40px;
 }
-#footer_table {
-	height: 40px;
-	width: 1080px;
-	text-align: center;
+#footer p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.5em;
 }
 
 /* SCROLLBAR STYLE */
