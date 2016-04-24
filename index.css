@@ -74,10 +74,15 @@ body {
 #welcome {
 	background-image: url(assets/tiles/Welcome.png)
 }
-#welcomecontent {	
+#welcomecontent {
 	margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
+	Height: 80px;
+	Width: 1040px;
+	line-height: 80px;
+	background-color: #000;
+	border-radius: 5px;
+	font-size: 4em;
+	font-family: "Lucida Console", Monaco, monospace;
 }
 #programs {
 	background-image: url(assets/tiles/Programs.png);

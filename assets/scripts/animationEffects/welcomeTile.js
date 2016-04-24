@@ -1,8 +1,5 @@
 //constant
 const APPOINTMENTS = [
-
-4,23,2016,2,15,'am',Hello there Bryan
-
 /*APPOINTMENT 1*/
 //Month,Day,Year,Hour,Minute,am/pm,message
 
@@ -26,9 +23,7 @@ $(document).ready(function() {
                 var currentHour = currentDate.getHours();
                 var currentMinute = currentDate.getMinutes();
 				//var currentSeconds = currentDate.getSeconds();
-				
-				
-				
+
 				
 				//formatting time
                 if (currentMinute < 10) {
@@ -42,13 +37,7 @@ $(document).ready(function() {
                 var scheduledTime = currentHour +":"+currentMinute+":"+" "+ampm;
 				//end time formatting
 				
-				
-				
-				
-				
-				
-				
-				
+				/*
 				
                 //animating content
                 $('#welcomecontent').fadeOut('slow','swing',function()
@@ -58,8 +47,9 @@ $(document).ready(function() {
                 });
 
                 },1000)
+				
+				*/
             }
     }
     welcomeRotator.init();
-    });
- 
+});
