@@ -4,6 +4,7 @@ $(document).ready(function() {
 	
 	//Main Slider Actions
 	var slider=$('.bxslider').bxSlider({
+		speed: 5000,
 		//making it auto rotate
   		auto: true,
 		//turning off the auto controls

@@ -11,13 +11,13 @@
             var currentItem = 0;
             //loop through the items and animate each one
             var infiniteLoop = setInterval(function(){
-				$('.fade-effect').eq(currentItem).hide( "fade", "slow" );
+				$('.fade-effect').eq(currentItem).hide( "puff");
                 if(currentItem == numberOfItems-1){		 
                     currentItem = 0;
-					$('.fade-effect').eq(currentItem).show("fade", "slow");
+					$('.fade-effect').eq(currentItem).show("puff");
                 }else{
 						currentItem++;
-						$('.fade-effect').eq(currentItem).show("fade", "slow");
+						$('.fade-effect').eq(currentItem).show("puff");
 				}
             }, itemInterval);
         }
