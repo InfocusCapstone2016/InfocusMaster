@@ -11,6 +11,22 @@ var check=false;
 function resetVariables(){
 	check=false;	
 }
+function time(){
+	var curDate=new Date();
+	var curHour = curDate.getHours();
+	var curMinute = curDate.getMinutes();
+	//formatting time
+	if (curMinute < 10) {
+    	curMinute = "0" + curMinute;
+     }
+     //am's & pm's
+     var ampm = curHour < 12 ? "am" : "pm";
+	//formatting all hours to 12hr time
+    curHour = (curHour%12);
+    curHour = (curHour == 0 ? 12 : curHour);
+    var scheduledTime = curHour +":"+curMinute+ampm;
+	return scheduledTime;
+}
 	
 //ajax function to pull CSV
 var acquireCSV = function(){
@@ -106,14 +122,16 @@ function processData(allText) {
 			var aptLastName=splitArray[7];
 			//calling function to check appoointment times
 			check=checkTime(aptMonth, aptDay, aptYear, aptHour, aptMin, am_pm);
+			//getting current time
+			var curTime=time();
 			//what to do if someone has an appointment in the time window
 			if(check==true){
-				$('#aptMarquee').text("Welcome, " + aptFirstName + " " + aptLastName);
+				$('#aptMarquee').text(curTime+" Welcome, " + aptFirstName + " " + aptLastName);
 				break;
 			}
 			//default mesasge if no one has an appointment
 			else{
-			$('#aptMarquee').text("Welcome, to South Hills!");
+			$('#aptMarquee').text(curTime+" Welcome, to South Hills!");
 			}	
 		}
 	}
