@@ -1,3 +1,4 @@
+
 //4 Second Fade Effect
    var FadeEffect =
     {
@@ -52,8 +53,14 @@
     //function for sliding page content
     var slidingContent=function (){
     //hiding content except for overview
-    $('.trContent').hide();
-    $('#overview').show();
+	if(sessionStorage.openDiv!=null){
+		$('.trContent').hide();
+    	$("#"+sessionStorage.openDiv).show();
+	}
+	else{
+    	$('.trContent').hide();
+    	$('#overview').show();
+	}
     
     //getting the header that was clicked on
     $('.trHeader').click(function(){
@@ -70,3 +77,5 @@
     });
     
 }
+
+
