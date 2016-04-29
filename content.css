@@ -138,7 +138,7 @@ body {
 	border: 0px;
 }
 .contentBuffer p img {
-	border: 2px solid #3171B8;
+	border: 2px solid #282828;
 	border-radius: 10px;
 	margin: 0 10px 0 10px;
 }
@@ -150,7 +150,7 @@ body {
 	margin: 10px 0 10px 0;
 }
 .contentBuffer .fancy {
-	color: #3171B8;
+	color: #282828;
 	font-size: 1.8em;
 	line-height: 1em;
 }

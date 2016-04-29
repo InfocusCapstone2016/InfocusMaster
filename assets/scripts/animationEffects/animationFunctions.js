@@ -66,8 +66,6 @@
     $('.trHeader').click(function(){
         //getting the id of the header
         var header=$(this).attr('id');
-		var content=$(this).next('.trContent').attr('id');
-		$('#'+content).load("index_"+content+".html");
         //looping through each header to slide up the ones that were not clicked on
         $('.trHeader').each(function(){
             if($(this).attr('id') !== header){
