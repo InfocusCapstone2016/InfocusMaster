@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* DEFAULT PAGE RULES */
+body {
+	color: #000;
+	background-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 62.5%;
+}
+
+/* SCROLLBAR STYLE */
+.scrollbar {
+	margin: 10px 0 0 35px;
+	float: left;
+	height: 1055px;
+	width: 990px;
+	overflow-y: auto;
+	margin-bottom: 25px;
+}
+.scrollbarExtended {
+	margin: 10px 0 0 35px;
+	float: left;
+	height: 1500px;
+	width: 990px;
+	overflow-y: auto;
+	margin-bottom: 25px;
+}
+.SBstyle::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	background-color: #FFF;
+}
+.SBstyle::-webkit-scrollbar {
+	width: 30px;
+	background-color: #FFF;
+}
+.SBstyle::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3171B8;
+}
+
+/* FORMATTING STYLES */
+.contentBuffer {
+	text-align: center;
+	width: 800px;
+	margin: 0 auto 0 auto;
+}
+.contentBuffer h1 {
+	font-size: 3em;
+	color: #3171B8;
+}
+.contentBuffer h2 {
+	font-size: 2.5em;
+	color: #3171B8;
+}
+.contentBuffer h3 {
+	font-size: 2em;
+}
+.contentBuffer p {
+	font-size: 1.5em;
+	line-height: 1.75em;
+}
+.contentBuffer a {
+	text-decoration: none;
+	color: #3171B8;
+}
+.contentBuffer hr {
+	width: 50%;
+	height: 2px;
+	background-color: #3171B8;
+	border: 0px;
+}
+.contentBuffer p img {
+	border: 2px solid #282828;
+	border-radius: 10px;
+	margin: 0 10px 0 10px;
+}
+.contentBuffer .blueButton {
+	padding: 10px 20px 10px 20px;
+	color: #FFF;
+	background-color: #3171B8;
+	border-radius: 10px;
+	margin: 10px 0 10px 0;
+}
+.contentBuffer .fancy {
+	color: #282828;
+	font-size: 1.8em;
+	line-height: 1em;
+}
+.contentBuffer .note {
+	color: #000;
+	font-size: 1.2em;
+	line-height: 1em;
+	font-style: italic;
+	width: 700px;
+	margin: 0 auto 0 auto;
+}
