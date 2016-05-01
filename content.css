@@ -81,15 +81,6 @@ body {
 	padding: 5px;
 }
 
-/* iFrame */
-iframe {
-	width: 1030px;
-	height: 1090px;
-	border: 0;
-	border-radius: 20px;
-	overflow: none;
-}
-
 /* HEADER DIV */
 .trHeader {
 	border-radius: 20px;
@@ -117,9 +108,13 @@ iframe {
 	width: 1030px;
 	overflow: none;
 }
-/* SUB PAGE CONTENT DIV HEIGHT */
-.contentExtended {
-	height: 1520px;
+
+/* iFrame */
+iframe {
+	width: 1030px;
+	height: 1090px;
+	border: 0px;
+	border-radius: 20px;
 }
 
 /* FOOTER RULES */

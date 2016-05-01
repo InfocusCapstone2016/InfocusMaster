@@ -90,6 +90,7 @@ body {
 	font-family: "Lucida Console", Monaco, monospace;
 }
 #programs {
+	cursor: pointer;
 	background-image: url(assets/tiles/Programs.png);
 }
 #testimonials {
@@ -111,16 +112,22 @@ body {
 	font-weight: 900;
 }
 #careerServices {
+	cursor: pointer;
 }
 #financialAid {
+	cursor: pointer;
 }
 #admissions {
+	cursor: pointer;
 }
 #aboutUs {
+	cursor: pointer;
 }
 #studentSpotlight {
+	cursor: pointer;
 }
 #community {
+	cursor: pointer;
 	background-image: url(assets/tiles/Community.png);
 }
 
