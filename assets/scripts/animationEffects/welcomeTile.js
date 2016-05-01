@@ -3,7 +3,7 @@
 
 
 //global variables
-var appointments = [[]];
+var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "4/30/2016/8/33/pm/Natalie/Torretti"];
 var interval=10000;
 var check=false;
 
@@ -12,40 +12,59 @@ function resetVariables(){
 	check=false;	
 }
 function time(){
-	var curDate=new Date();
-	var curHour = curDate.getHours();
-	var curMinute = curDate.getMinutes();
+	//getting the current time
+	 var curDate = new Date();
+     var curHour = curDate.getHours();
+     var curMinute = curDate.getMinutes();
+	 
 	//formatting time
-	if (curMinute < 10) {
-    	curMinute = "0" + curMinute;
-     }
+      if (curMinute < 10) {
+     curMinute = "0" + curMinute;
+    }
      //am's & pm's
      var ampm = curHour < 12 ? "am" : "pm";
-	//formatting all hours to 12hr time
-    curHour = (curHour%12);
-    curHour = (curHour == 0 ? 12 : curHour);
-    var scheduledTime = curHour +":"+curMinute+ampm;
-	return scheduledTime;
+	 
+     //formatting all hours to 12hr time
+     curHour = (curHour%12);
+     curHour = (curHour == 0 ? 12 : curHour);
+     var scheduledTime = curHour +":"+curMinute+ampm;
+	 return scheduledTime;
+
 }
+
+var checkAppointments=function(){
+	//creating array variables
+	var splitArray=[];
+	//looping through the appointments array
+	for(var j = 0; j < appointments.length; j++) {
+		//breaking the different appointments into variables
+		splitArray=appointments[j].split('/');
+		var aptMonth=splitArray[0];
+		var aptDay=splitArray[1];
+		var aptYear=splitArray[2];
+		var aptHour=splitArray[3];
+		var aptMin=splitArray[4];
+		var am_pm=splitArray[5];
+		var aptFirstName=splitArray[6];
+		var aptLastName=splitArray[7];
+		//checking to see if the appointments are in the time window
+		check=checkTime(aptMonth, aptDay, aptYear, aptHour, aptMin, am_pm);
+		var curTime=time();
+		//display the messages in the welcome tile
+		if(check==true){
+			$('#aptMarquee').text(curTime + " Welcome, " + aptFirstName + " " + aptLastName);
+			break;
+		}
+			//default mesasge if no one has an appointment
+		else{
+			$('#aptMarquee').text(curTime + " Welcome, to South Hills!");
+		}	
+		
+	}
 	
-//ajax function to pull CSV
-var acquireCSV = function(){
-	$.ajax({
-    	type: "GET",
-        url: "assets/scripts/animationEffects/welcomeSchedule.csv",
-        async: false,
-    	success: function (csvd) {
-        appointments = $.csv.toArrays(csvd);
-		processData(appointments);
-    },
-    dataType: "text",
-    complete: function () {
-      
-    }
+}
 	
 
-	});
-}
 
 //function to check the time against appointment times
 function checkTime(chkMonth, chkDay, chkYear,chkHour, chkMin, chkampm){
@@ -61,6 +80,8 @@ function checkTime(chkMonth, chkDay, chkYear,chkHour, chkMin, chkampm){
 	 var lowerMinute=0;
 	 var lowerMinute=0;
 	 var timeCheck = false;
+	 
+	
 	 
       //checking in 20min window for times ending in 50-59
 	if (currentMinute >= 50)
@@ -85,13 +106,16 @@ function checkTime(chkMonth, chkDay, chkYear,chkHour, chkMin, chkampm){
       lowerMinute = currentMinute-10;
       upperMinute = currentMinute+10;
 	 }
-	
+	 lowerHour = (lowerHour%12);
+     lowerHour = (lowerHour == 0 ? 12 : lowerHour);
+	 upperHour = (upperHour%12);
+     upperHour = (upperHour == 0 ? 12 : upperHour);
 	//Checking the appointment times against current times
       if (currentDay == chkDay && currentMonth == chkMonth && currentYear == chkYear)
       {
-		  
+
       		if (chkHour >= lowerHour && chkHour <= upperHour)
-      		{
+      		{   
 		 
        			if (chkMin > lowerMinute && chkMin < upperMinute)
        			{
@@ -102,40 +126,6 @@ function checkTime(chkMonth, chkDay, chkYear,chkHour, chkMin, chkampm){
 	return timeCheck;
 }
 
-
-//function to pull the data from the CSV and breaking the lines apart and then display the proper message
-function processData(allText) {
-	//looping through the lines of the CSV file
-	for(var i = 0; i < allText.length; i++) {
-    	var cube = allText[i];
-    	for(var j = 0; j < allText.length; j++) {
-			//pulling apart the lines of the CSV file	
-			var line=allText[j] + " ";
-			var splitArray=line.split(",");
-			var aptMonth=splitArray[0];
-			var aptDay=splitArray[1];
-			var aptYear=splitArray[2];
-			var aptHour=splitArray[3];
-			var aptMin=splitArray[4];
-			var am_pm=splitArray[5];
-			var aptFirstName=splitArray[6];
-			var aptLastName=splitArray[7];
-			//calling function to check appoointment times
-			check=checkTime(aptMonth, aptDay, aptYear, aptHour, aptMin, am_pm);
-			//getting current time
-			var curTime=time();
-			//what to do if someone has an appointment in the time window
-			if(check==true){
-				$('#aptMarquee').text(curTime+" Welcome, " + aptFirstName + " " + aptLastName);
-				break;
-			}
-			//default mesasge if no one has an appointment
-			else{
-			$('#aptMarquee').text(curTime+" Welcome, to South Hills!");
-			}	
-		}
-	}
-}
 		
 $(document).ready(function() {
 	
@@ -148,7 +138,7 @@ $(document).ready(function() {
         	//setting the interval to check the time
             var welcomeTimeLoop = setInterval(function() {
 				//calling the functions to check for appointments
-				 acquireCSV();
+				 checkAppointments();
 				 //reseting the check variable
 				 resetVariables();
 	
