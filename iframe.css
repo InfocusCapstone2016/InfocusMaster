@@ -88,4 +88,15 @@ body {
 	font-style: italic;
 	width: 700px;
 	margin: 0 auto 0 auto;
+}.contentBuffer .back {
+	background-color: #3171B8;
+	padding: 10px;
+	margin: 5px;
+	position: fixed;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 10px;
+	left: 10px;
+	top: 10px;
 }
