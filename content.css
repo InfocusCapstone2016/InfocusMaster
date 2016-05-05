@@ -17,6 +17,7 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
 	overflow: hidden;
+	background-image: url(assets/content/bg.png);
 }
 
 /* HEADER RULES */
