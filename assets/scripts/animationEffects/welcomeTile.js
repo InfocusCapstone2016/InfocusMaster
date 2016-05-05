@@ -57,7 +57,7 @@ var checkAppointments=function(){
 		}
 			//default mesasge if no one has an appointment
 		else{
-			$('#aptMarquee').text(curTime + " Welcome, to South Hills!");
+			$('#aptMarquee').text("Welcome to South Hills! " + curTime);
 		}	
 		
 	}
