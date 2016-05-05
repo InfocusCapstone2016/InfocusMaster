@@ -69,7 +69,7 @@
 		var clickFrame=$(this).next('div.trContent').children('iframe').attr('id');
 		var srcName=clickFrame+'.html';
 		var frame='#'+clickFrame;
-		alert(frame);
+		//alert(frame);
 		$(frame).attr('src', srcName);
         //looping through each header to slide up the ones that were not clicked on
         $('.trHeader').each(function(){
