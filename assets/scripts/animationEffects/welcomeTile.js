@@ -11,7 +11,26 @@ var check=false;
 function resetVariables(){
 	check=false;	
 }
+
+//function to check if device is connected to the internet
+function checkConnection() {
+	var status = navigator.onLine;
+	var check=false;
+	if (status) {
+		check=true;
+	} 
+	else {
+		check=false;
+	}
+	return check;
+}
+
 function time(){
+	//checking the network connection
+	var connectCheck=checkConnection();
+	
+	if(connectCheck==true){
+		
 	//getting the current time
 	 var curDate = new Date();
      var curHour = curDate.getHours();
@@ -29,7 +48,10 @@ function time(){
      curHour = (curHour == 0 ? 12 : curHour);
      var scheduledTime = curHour +":"+curMinute+ampm;
 	 return scheduledTime;
-
+	}
+	else{
+		
+	}
 }
 
 var checkAppointments=function(){
@@ -53,12 +75,12 @@ var checkAppointments=function(){
 		var curTime=time();
 		//display the messages in the welcome tile
 		if(check==true){
-			$('#aptMarquee').text("Welcome, " + aptFirstName + " " + aptLastName + " " + curTime);
+			$('#aptMarquee').text("WELCOME, " + aptFirstName + " " + aptLastName + " " + curTime);
 			break;
 		}
 			//default mesasge if no one has an appointment
 		else{
-			$('#aptMarquee').text("Welcome to South Hills!");
+			$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
 		}	
 		
 	}
