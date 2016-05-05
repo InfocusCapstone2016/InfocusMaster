@@ -3,7 +3,7 @@
 
 
 //global variables
-var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "4/30/2016/8/33/pm/Natalie/Torretti"];
+var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "5/5/2016/11/20/am/Natalie/Torretti"];
 var interval=10000;
 var check=false;
 
@@ -49,15 +49,16 @@ var checkAppointments=function(){
 		var aptLastName=splitArray[7];
 		//checking to see if the appointments are in the time window
 		check=checkTime(aptMonth, aptDay, aptYear, aptHour, aptMin, am_pm);
+		//getting the current time
 		var curTime=time();
 		//display the messages in the welcome tile
 		if(check==true){
-			$('#aptMarquee').text(curTime + " Welcome, " + aptFirstName + " " + aptLastName);
+			$('#aptMarquee').text("Welcome, " + aptFirstName + " " + aptLastName + " " + curTime);
 			break;
 		}
 			//default mesasge if no one has an appointment
 		else{
-			$('#aptMarquee').text("Welcome to South Hills! " + curTime);
+			$('#aptMarquee').text("Welcome to South Hills!");
 		}	
 		
 	}

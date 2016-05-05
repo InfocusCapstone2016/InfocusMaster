@@ -66,10 +66,12 @@
     $('.trHeader').click(function(){
         //getting the id of the header
         var header=$(this).attr('id');
+		//getting the iframe that needs to be loaded
 		var clickFrame=$(this).next('div.trContent').children('iframe').attr('id');
+		//creating the page name that needs to be loaded
 		var srcName=clickFrame+'.html';
+		//changing the source to the correct page for the iframe
 		var frame='#'+clickFrame;
-		//alert(frame);
 		$(frame).attr('src', srcName);
         //looping through each header to slide up the ones that were not clicked on
         $('.trHeader').each(function(){
