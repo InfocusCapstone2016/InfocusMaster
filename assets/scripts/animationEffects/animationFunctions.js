@@ -73,6 +73,9 @@
 		//changing the source to the correct page for the iframe
 		var frame='#'+clickFrame;
 		$(frame).attr('src', srcName);
+		if(clickFrame !== 'overview'){
+			$('#overview').attr('src', '');
+		}
         //looping through each header to slide up the ones that were not clicked on
         $('.trHeader').each(function(){
             if($(this).attr('id') !== header){
