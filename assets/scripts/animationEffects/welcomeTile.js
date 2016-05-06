@@ -3,7 +3,7 @@
 
 
 //global variables
-var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "5/5/2016/11/20/am/Natalie/Torretti"];
+var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "5/5/2016/11/20/am/Natalie/Torretti", "5/6/2016/11/10/am/Natalie/Torretti"];
 var interval=10000;
 var check=false;
 
@@ -41,7 +41,7 @@ function time(){
      curMinute = "0" + curMinute;
     }
      //am's & pm's
-     var ampm = curHour < 12 ? "am" : "pm";
+     var ampm = curHour < 12 ? "pm" : "am";
 	 
      //formatting all hours to 12hr time
      curHour = (curHour%12);
