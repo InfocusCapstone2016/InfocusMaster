@@ -28,6 +28,7 @@ function checkConnection() {
 function time(){
 	//checking the network connection
 	var connectCheck=checkConnection();
+	var noTime=false;
 	
 	if(connectCheck==true){
 		
@@ -41,7 +42,7 @@ function time(){
      curMinute = "0" + curMinute;
     }
      //am's & pm's
-     var ampm = curHour < 12 ? "pm" : "am";
+     var ampm = curHour < 12 ? "am" : "pm";
 	 
      //formatting all hours to 12hr time
      curHour = (curHour%12);
@@ -50,6 +51,7 @@ function time(){
 	 return scheduledTime;
 	}
 	else{
+	return noTime;
 		
 	}
 }
@@ -73,15 +75,20 @@ var checkAppointments=function(){
 		check=checkTime(aptMonth, aptDay, aptYear, aptHour, aptMin, am_pm);
 		//getting the current time
 		var curTime=time();
-		//display the messages in the welcome tile
-		if(check==true){
-			$('#aptMarquee').text("WELCOME, " + aptFirstName + " " + aptLastName + " " + curTime);
-			break;
-		}
+		if(curTime!=false){
+			//display the messages in the welcome tile
+			if(check==true){
+				$('#aptMarquee').text("WELCOME, " + aptFirstName + " " + aptLastName + " " + curTime);
+				break;
+			}
 			//default mesasge if no one has an appointment
+			else{
+				$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
+			}	
+		}
 		else{
-			$('#aptMarquee').text("WELCOME TO SOUTH HILLS" + curTime);
-		}	
+			$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
+		}
 		
 	}
 	
