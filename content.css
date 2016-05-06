@@ -1,25 +1,134 @@
 @charset "utf-8";
+/* DEFAULT PAGE RULES */
 body {
 	color: #000;
 	background-color: #000;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 62.5%;
 	margin: 0px;
 	padding: 0px;
-}
-h1 {
-	font-size: 3em;
-}
-a {
-	text-decoration: none;
-	font-size: 2em;
+	font-size: 62.5%;
 }
 
 /* 1080x1920 BOUNDARY RULES */
 #container {
-	height: 1900px;
-	width: 1060px;
-	padding: 10px;
+	height: 1920px;
+	width: 1080px;
+	padding: 0;
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
+	overflow: hidden;
+	background-image: url(assets/content/bg.png);
+}
+
+/* HEADER RULES */
+#header {
+	background-image: url(assets/content/header_bg.png);
+	height: 230px;
+	width: 1080px;
+	text-transform: uppercase;
+}
+#sectionTitle {
+	font-size: 8em;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+	margin: 0;
+	width: 880px;
+	overflow: hidden;
+	float: left;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+}
+
+/* USE THESE IN CASES OF LONG TITLES IT UTILIZES TWO LINES INSTEAD OF ONE */
+#sectionTitleHalfTop {
+	font-size: 5em;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+	margin: 0;
+	width: 880px;
+	float: left;
+	height: 100px;
+	text-align: center;
+	line-height: 140px;
+}
+#sectionTitleHalfBottom {
+	font-size: 4em;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+	margin: 0;
+	width: 880px;
+	float: left;
+	height: 100px;
+	text-align: center;
+}
+#SHLogo {
+	float: right;
+	height: 200px;
+	width: 200px;
+	cursor: pointer;
+}
+
+/* BODY AND CONTENT RULES */
+#body {
+	height: 1630px;
+	width: 1080px;
+}
+#content {
+	background-color: #282828;
+	width: 1030px;
+	border-radius: 20px;
+	margin: 20px 0 0 20px;
+	padding: 5px;
+}
+
+/* HEADER DIV */
+.trHeader {
+	border-radius: 20px;
+	height: 60px;
+	margin: 10px 0 10px 0;
+	width: 1030px;
+	line-height: 60px;
+}
+
+/* HEADER DIV: TITLE STYLE */
+.title {
+	color: #FFF;
+	background-color: #3171B8;
+	padding: 0 0 0 30px;
+	border-radius: 20px;
+	margin: 0 25px 0 25px;
+	text-transform: uppercase;
+}
+
+/* CONTENT DIV */
+.trContent {
+	border-radius: 20px;
+	background-color: #FFF;
+	height: 1090px;
+	width: 1030px;
+	overflow: none;
+}
+
+/* iFrame */
+iframe {
+	width: 1030px;
+	height: 1090px;
+	border: 0px;
+	border-radius: 20px;
+}
+
+/* FOOTER RULES */
+#footer {
+	height: 40px;
+	width: 1080px;
+	background-color: #3171B8;
+	text-align: center;
+	color: #FFF;
+	line-height: 40px;
+}
+#footer p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.5em;
 }

@@ -11,13 +11,20 @@ body {
 
 /* TILE STYLE RULES */
 .tile {
-	background-color: #3171b8;
+	/*background-color: #3171b8;*/
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
 	color: #FFF;
 	text-align: center;
 	float: left;
 	overflow: hidden;
+	
+	/* GRADIENT BG */
+	/*background: #3171b8; /* Old browsers */
+	/*background: -moz-linear-gradient(top,  #3171b8 0%, #ffffff 100%); /* FF3.6-15 */
+	/*background: -webkit-linear-gradient(top,  #3171b8 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+	/*background: linear-gradient(to bottom,  #3171b8 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3171b8', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 /* WIDTH RULES */
@@ -63,7 +70,7 @@ body {
 	width: 1060px;
 	padding: 10px;
 	margin: 0 auto 0 auto;
-	background-color: #FFF;
+	background-image: url(assets/tiles/Layout.png);
 }
 
 /* INDIVIDUAL TILE RULES */
@@ -72,28 +79,20 @@ body {
 #rotator {
 }
 #welcome {
-	background-image: url(assets/tiles/Welcome.png)
+
 }
-#welcomecontent {	
-	margin: 75px 10px 5px 10px;
-    Height: 80px;
-    Width: 1040px;
+#welcomecontent {
+	margin: 0;
+	Height: 165px;
+	Width: 1060px;
+	line-height: 165px;
+	font-size: 6em;
+	font-family: "Lucida Console", Monaco, monospace;
+	text-transform: uppercase;
 }
 #programs {
+	cursor: pointer;
 	background-image: url(assets/tiles/Programs.png);
-}
-#careerServices {
-}
-#financialAid {
-}
-#admissions {
-}
-#aboutUs {
-}
-#studentSpotlight {
-}
-#community {
-	background-image: url(assets/tiles/Community.png);
 }
 #testimonials {
 	background-image: url(assets/tiles/Testimonials.png);
@@ -112,6 +111,25 @@ body {
 .bluetestimonialtext {
 	color: #3171B8;
 	font-weight: 900;
+}
+#careerServices {
+	cursor: pointer;
+}
+#financialAid {
+	cursor: pointer;
+}
+#admissions {
+	cursor: pointer;
+}
+#aboutUs {
+	cursor: pointer;
+}
+#studentSpotlight {
+	cursor: pointer;
+}
+#community {
+	cursor: pointer;
+	background-image: url(assets/tiles/Community.png);
 }
 
 /* ROTATOR SLIDER RULES */
@@ -159,6 +177,6 @@ a.control_next {
   border-radius: 2px 0 0 2px;
 }
 .bxslider{
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
