@@ -7,6 +7,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-size: 62.5%;
+	border-radius: 20px;
 }
 
 /* SCROLLBAR STYLE */
@@ -24,8 +25,7 @@ body {
 	background-color: #FFF;
 }
 .SBstyle::-webkit-scrollbar {
-	width: 30px;
-	background-color: #FFF;
+	width: 15px;
 }
 .SBstyle::-webkit-scrollbar-thumb {
 	border-radius: 20px;
