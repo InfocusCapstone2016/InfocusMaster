@@ -80,7 +80,7 @@ var checkAppointments=function(){
 		}
 			//default mesasge if no one has an appointment
 		else{
-			$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
+			$('#aptMarquee').text("WELCOME TO SOUTH HILLS" + curTime);
 		}	
 		
 	}
