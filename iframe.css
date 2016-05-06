@@ -69,6 +69,10 @@ body {
 	border-radius: 10px;
 	margin: 0 10px 0 10px;
 }
+.contentBuffer ul {
+	font-size: 1.5em;
+	line-height: 1.75em;
+}
 .contentBuffer .blueButton {
 	padding: 10px 20px 10px 20px;
 	color: #FFF;

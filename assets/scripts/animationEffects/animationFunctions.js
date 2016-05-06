@@ -79,7 +79,7 @@
                 $(this).next('.trContent').slideUp('slow');
             }
         });
-        //sliding downt the content of the header that was clicked on
+        //sliding down the content of the header that was clicked on
         $(this).next('.trContent').slideToggle('slow');
 		
     });
