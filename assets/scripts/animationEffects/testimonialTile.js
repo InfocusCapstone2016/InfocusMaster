@@ -11,7 +11,7 @@ const TESTIMONIALS = [
 
 /*Testimonial 3*/
 '<p>"I love that I can more <span class="bluetestimonialtext">specifically target</span> what I want to do.<br />'+
-'I think my SouthHills degree can <span class="bluetestimonialtext">open a lot of doors</span> for me." -DANIELLE MEADOWS'
+'I think my South Hills degree can <span class="bluetestimonialtext">open a lot of doors</span> for me." -DANIELLE MEADOWS'
 
 ];//This is the closing TESTIMONIALS bracket
 
