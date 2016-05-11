@@ -17,7 +17,7 @@ body {
 	margin: 0 auto 0 auto;
 	background-color: #FFF;
 	overflow: hidden;
-	background-image: url(assets/content/bg.png);
+	background-image: url(assets/content/sh_bg.png);
 }
 
 /* HEADER RULES */
@@ -99,6 +99,21 @@ body {
 	border-radius: 20px;
 	margin: 0 25px 0 25px;
 	text-transform: uppercase;
+}
+
+/* FILLER */
+.filler {
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+.five {
+	height: 350px;
+}
+.four {
+	height: 280px;
+}
+.three {
+	height: 210px;
 }
 
 /* CONTENT DIV */

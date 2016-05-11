@@ -89,9 +89,7 @@ var checkAppointments=function(){
 		else{
 			$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
 		}
-		
 	}
-	
 }
 	
 
