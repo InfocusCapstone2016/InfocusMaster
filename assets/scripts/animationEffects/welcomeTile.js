@@ -83,11 +83,11 @@ var checkAppointments=function(){
 			}
 			//default mesasge if no one has an appointment
 			else{
-				$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
+				$('#aptMarquee').text("South Hills is excited to be a part of InfoComm 2016, right here in Las Vegas!");
 			}	
 		}
 		else{
-			$('#aptMarquee').text("WELCOME TO SOUTH HILLS");
+			$('#aptMarquee').text("South Hills is excited to be a part of InfoComm 2016, right here in Las Vegas!");
 		}
 	}
 }
