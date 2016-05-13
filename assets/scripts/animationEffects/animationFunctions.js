@@ -63,14 +63,14 @@
 	}
 	
 	//global variables to check for open divs
-	var openCheck=false;
-	var content;
+	var openCheck=0;
+	var tabCount=0;
     //getting the header that was clicked on
     $('.trHeader').click(function(){
+		openCheck=0;
+		tabCount=0;
         //getting the id of the header
         var header=$(this).attr('id');
-		//getting the id of the content
-		content=$(this).next('.trContent').attr('id');
 		//getting the iframe that needs to be loaded
 		var clickFrame=$(this).next('div.trContent').children('iframe').attr('id');
 		//creating the page name that needs to be loaded
@@ -81,36 +81,35 @@
 		if(clickFrame !== 'iOverview'){
 			$('#iOverview').attr('src', '');
 		}
+		
         //looping through each header to slide up the ones that were not clicked on
         $('.trHeader').each(function(){
             if($(this).attr('id') !== header){
                 $(this).next('.trContent').slideUp('slow');	
             }
 			
+			
         });
-		//checking to see if all the tabs are closed
-		$('.trHeader').each(function(){
-			if($(this).next('.trContent').is(':hidden')){
-				openCheck=false;
-			}
-			else{
-				openCheck=true;	
-			}
-		});
-		//opening overview if all the tabs are closed
-		if(openCheck==false){
-			$('#overview').show();
-			$('#iOverview').attr('src', 'iOverview.html');
-		}
 		
+        //sliding down the content and checking to make sure all the tabs are not closed and opening the overview section if they are
 		
-        //sliding down the content of the header that was clicked on if it is not the overview section
-		if(content!=='overview'){
-        	$(this).next('.trContent').slideToggle('slow');
-		}
+        	$(this).next('.trContent').slideToggle('slow', function(){
+				$('.trHeader').each(function(){	
+					tabCount++;
+					if($(this).next('.trContent').is(':hidden')){	
+						openCheck++;					
+					}
+				});
+				if(openCheck===tabCount){
+					$('#overview').slideToggle('slow');
+					$('#iOverview').attr('src', 'iOverview.html');
+				}	
+			});
+				
 		
     });
-
+	
+		
     
 }
 
