@@ -71,6 +71,7 @@
 		tabCount=0;
         //getting the id of the header
         var header=$(this).attr('id');
+		if(header!='header-1'){
 		//getting the iframe that needs to be loaded
 		var clickFrame=$(this).next('div.trContent').children('iframe').attr('id');
 		//creating the page name that needs to be loaded
@@ -83,6 +84,7 @@
 		}
 		
         //looping through each header to slide up the ones that were not clicked on
+		
         $('.trHeader').each(function(){
             if($(this).attr('id') !== header){
                 $(this).next('.trContent').slideUp('slow');	
@@ -90,6 +92,7 @@
 			
 			
         });
+		
 		
         //sliding down the content and checking to make sure all the tabs are not closed and opening the overview section if they are
 		
@@ -105,6 +108,7 @@
 					$('#iOverview').attr('src', 'iOverview.html');
 				}	
 			});
+		}
 				
 		
     });
