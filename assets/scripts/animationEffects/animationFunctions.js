@@ -71,7 +71,9 @@
 		tabCount=0;
         //getting the id of the header
         var header=$(this).attr('id');
-		if(header!='header-1'){
+		if(header='header-1' && $(this).next('.trContent').is(':visible')){
+		}
+		else{
 		//getting the iframe that needs to be loaded
 		var clickFrame=$(this).next('div.trContent').children('iframe').attr('id');
 		//creating the page name that needs to be loaded
