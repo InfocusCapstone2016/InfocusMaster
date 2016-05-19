@@ -71,7 +71,9 @@
 		tabCount=0;
         //getting the id of the header
         var header=$(this).attr('id');
+		//stopping the overview tab from being able to close itself
 		if(header='header-1' && $(this).next('.trContent').is(':visible')){
+			
 		}
 		else{
 		//getting the iframe that needs to be loaded
