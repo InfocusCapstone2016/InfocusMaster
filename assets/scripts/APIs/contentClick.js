@@ -1,3 +1,6 @@
+$(document).ready(function(e) {
+    
+
 $('#jeffLink').click(function(){
 	SignageInterface.contentClick('https://www.linkedin.com/in/jeffrey-lanning-37b8b1120');
 });
@@ -12,4 +15,6 @@ $('#jimLink').click(function(){
 });
 $('#coleLink').click(function(){
 	SignageInterface.contentClick('https://www.linkedin.com/in/cole-brungart-a7628211b');
+});
+
 });
