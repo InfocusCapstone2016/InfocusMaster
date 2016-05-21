@@ -110,9 +110,11 @@ body {
 	font-style: italic;
 	width: 700px;
 	margin: 0 auto 0 auto;
-}.contentBuffer .back {
+}
+.contentBuffer .back {
 	background-color: #3171B8;
-	padding: 10px;
+	padding: 13px;
+	font-size: large;
 	margin: 5px;
 	position: fixed;
 	color: #FFF;
