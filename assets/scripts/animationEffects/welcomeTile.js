@@ -3,8 +3,8 @@
 
 
 //global variables
-var appointments = ["4/30/2016/8/20/pm/Bryan/Butler", "5/5/2016/11/20/am/Natalie/Torretti", "5/6/2016/11/10/am/Natalie/Torretti"];
-var interval=10000;
+var appointments = ["6/1/2016/11/00/am/Bryan/Butler", "6/1/2016/11/20/am/Natalie/Torretti", "6/1/2016/11/40/am/John/Snow"];
+var interval=1000;
 var check=false;
 
 //function to reset check variable
@@ -78,16 +78,16 @@ var checkAppointments=function(){
 		if(curTime!=false){
 			//display the messages in the welcome tile
 			if(check==true){
-				$('#aptMarquee').text("WELCOME, " + aptFirstName + " " + aptLastName + " " + curTime);
+				$('#aptMarquee').text("Welcome, " + aptFirstName + " " + aptLastName + " " + curTime);
 				break;
 			}
 			//default mesasge if no one has an appointment
 			else{
-				$('#aptMarquee').text("South Hills is excited to be a part of InfoComm 2016, right here in Las Vegas!");
+				$('#aptMarquee').text("Welcome to South Hills");
 			}	
 		}
 		else{
-			$('#aptMarquee').text("South Hills is excited to be a part of InfoComm 2016, right here in Las Vegas!");
+			$('#aptMarquee').text("Welcome to South Hills");
 		}
 	}
 }
